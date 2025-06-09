@@ -28,7 +28,7 @@ onMounted(() => {
 
 const authors = ref([
   {
-    name: "Calos",
+    name: "Carlos",
     image: Display,
     link: "https://www.instagram.com/anna.julia_015?igsh=MTg2dmZ2NG95Z3Z4dg==",
     description: "Discente do IFPR - Campus Assis Chateaubriand",
