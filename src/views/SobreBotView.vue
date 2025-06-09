@@ -33,19 +33,19 @@ const authors = ref([
   {
     name: "Carlos",
     image: Carlos,
-    link: "https://www.instagram.com/anna.julia_015?igsh=MTg2dmZ2NG95Z3Z4dg==",
+    link: "https://www.instagram.com/carloos_edu_01?igsh=cXk2OTduaHhuN2Yw",
     description: "Discente do IFPR - Campus Assis Chateaubriand",
   },
   {
     name: "Heitor",
     image: Heitor,
-    link: "https://www.instagram.com/nicolas.bordinii?igsh=MXdxOGx3NThmeTN2bA==",
+    link: "https://www.instagram.com/heitor_gavioli?igsh=angweDNpMmMyanhz",
     description: "Discente do IFPR - Campus Assis Chateaubriand",
   },
   {
     name: "Kallel",
     image: Kallel,
-    link: "https://www.instagram.com/nikoli_azevedo?igsh=MW4xM29qY2s0emZqaQ==",
+    link: "https://www.instagram.com/rag82815?igsh=MXQzcHNiY3d4Zm5ncg==",
     description: "Discente do IFPR - Campus Assis Chateaubriand",
   },
   {
