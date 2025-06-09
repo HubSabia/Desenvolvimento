@@ -32,19 +32,19 @@ onMounted(() => {
 const authors = ref([
   {
     name: "Carlos",
-    image: Display,
+    image: Carlos,
     link: "https://www.instagram.com/anna.julia_015?igsh=MTg2dmZ2NG95Z3Z4dg==",
     description: "Discente do IFPR - Campus Assis Chateaubriand",
   },
   {
     name: "Heitor",
-    image: Display,
+    image: Heitor,
     link: "https://www.instagram.com/nicolas.bordinii?igsh=MXdxOGx3NThmeTN2bA==",
     description: "Discente do IFPR - Campus Assis Chateaubriand",
   },
   {
     name: "Kallel",
-    image: Display,
+    image: Kallel,
     link: "https://www.instagram.com/nikoli_azevedo?igsh=MW4xM29qY2s0emZqaQ==",
     description: "Discente do IFPR - Campus Assis Chateaubriand",
   },
