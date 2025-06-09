@@ -17,6 +17,9 @@
 
 <script setup>
 import { onMounted, getCurrentInstance, ref } from 'vue';
+import Carlos from "@/assets/carloseduardo.jpeg";
+import Heitor from "@/assets/heitor.jpeg";
+import Kallel from "@/assets/kallel.jpeg";
 import Display from "@/assets/Display.jpeg";
 import fotoNovo3 from "@/assets/foto-novo3.jpg";
 
