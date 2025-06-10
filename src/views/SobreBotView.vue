@@ -69,7 +69,7 @@ const authors = ref([
 .authors-section {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Centraliza os cards no container */
+  justify-content: flex-start;
   gap: 20px; /* Cria um espaço consistente entre os cards */
   padding: 40px 0; /* Espaçamento vertical */
 }
