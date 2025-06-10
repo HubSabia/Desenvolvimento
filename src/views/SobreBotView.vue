@@ -1,16 +1,24 @@
 <template>
   <div id="sobrebot-view">
-    <!-- ... (sua navbar) ... -->
-
-    <!-- Seção de Autores -->
+    <!-- ... -->
     <div class="authors-section">
-      <div v-for="(author, index) in authors" :key="index" class="author">
-        <a :href="author.link" target="_blank" rel="noopener noreferrer">
-          <img :src="author.image" alt="Foto do autor">
-          <h3>{{ author.name }}</h3>
-          <p>{{ author.description }}</p>
-        </a>
-      </div>
+      <!-- A tag <a> é o card em si (a classe .author está nela) -->
+      <a v-for="(author, index) in authors" 
+         :key="index" 
+         :href="author.link" 
+         target="_blank" 
+         rel="noopener noreferrer"
+         class="author"> <!-- a classe 'author' está aqui -->
+
+        <img :src="author.image" 
+             :alt="'Foto de perfil de ' + author.name" 
+             loading="lazy"
+             width="150"
+             height="150">
+        
+        <h3>{{ author.name }}</h3>
+        <p>{{ author.description }}</p>
+      </a>
     </div>
   </div>
 </template>
@@ -58,44 +66,42 @@ const authors = ref([
 </script>
 
 <style>
+/* --- ESTILOS GERAIS E PARA DESKTOP (Telas Grandes) --- */
+
 #sobrebot-view {
-  /* A margem para acomodar a navbar lateral em telas grandes */
   margin-left: 260px; 
   padding: 20px;
-  /* Transição suave para a margem quando a tela for redimensionada */
   transition: margin-left 0.3s ease; 
 }
 
 .authors-section {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 20px; /* Cria um espaço consistente entre os cards */
-  padding: 40px 0; /* Espaçamento vertical */
+  justify-content: flex-start; /* Alinha os cards à esquerda */
+  gap: 20px; /* Espaço consistente entre os cards */
+  padding: 40px 0;
 }
 
+/* O container do card que é um link clicável */
 .author {
   width: 22%; 
-  min-width: 280px; /* Garante que o card não fique muito espremido */
-  
+  min-width: 280px; 
   text-align: center;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   background-color: #fff;
   transition: transform 0.2s ease-in-out;
+  text-decoration: none; /* Garante que o container não tenha sublinhado */
+  
+  /* Faz com que o conteúdo dentro dele se alinhe verticalmente */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .author:hover {
   transform: translateY(-5px);
-}
-
-.author a {
-  text-decoration: none;
-  color: inherit;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .author img {
@@ -107,49 +113,47 @@ const authors = ref([
   border: 3px solid #f0f0f0;
 }
 
+/* ESTILO DO NOME DO AUTOR */
 .author h3 {
   font-size: 1.2em;
+  font-weight: bold;
   margin-top: 10px;
   margin-bottom: 10px;
+  color: #333; /* Cor preta/cinza escuro padrão */
+  text-decoration: none; /* Sem sublinhado */
 }
 
+/* ESTILO DA DESCRIÇÃO */
 .author p {
   font-size: 1em;
-  color: #555;
-  flex-grow: 1;
+  color: #555; /* Cinza um pouco mais claro para a descrição */
+  text-decoration: none; /* Sem sublinhado */
+  flex-grow: 1; /* Ajuda a alinhar a altura dos cards se as descrições tiverem tamanhos diferentes */
 }
 
-
-/* --- MEDIA QUERY PARA TABLETS (Telas Médias) --- */
-/* Aplica estes estilos quando a tela for de 1024px ou menor */
+/* --- MEDIA QUERIES (Mantidas para responsividade) --- */
 @media (max-width: 1024px) {
   .author {
     width: 45%; 
   }
 }
 
-
-/* --- MEDIA QUERY PARA CELULARES (Telas Pequenas) --- */
-/* Aplica estes estilos quando a tela for de 768px ou menor */
 @media (max-width: 768px) {
   #sobrebot-view {
     margin-left: 0; 
     padding: 15px;
   }
-
   .authors-section {
     gap: 15px;
+    justify-content: center;
   }
-
   .author {
     width: 90%; 
     min-width: unset;
   }
-
   .author h3 {
     font-size: 1.1em;
   }
-
   .author p {
     font-size: 0.9em;
   }

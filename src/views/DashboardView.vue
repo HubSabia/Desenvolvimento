@@ -55,7 +55,7 @@ onMounted(() => {
 
 .view-subtitle {
   font-size: 1rem;
-  color: #4F5559;
+  color: #6c757d;
   margin-bottom: 30px;
 }
 
