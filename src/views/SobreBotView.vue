@@ -58,55 +58,44 @@ const authors = ref([
 </script>
 
 <style>
-/* Estilos para a navbar */
-.sobrebot-view {
-  margin-left: 260px;
+#sobrebot-view {
+  /* A margem para acomodar a navbar lateral em telas grandes */
+  margin-left: 260px; 
   padding: 20px;
-}
-#menu {
-  display: flex;
-  align-items: center;
-  padding: 0;
-  width: 100%;
-  max-width: 1256px;
+  /* Transição suave para a margem quando a tela for redimensionada */
+  transition: margin-left 0.3s ease; 
 }
 
-/* Estilos para o logotipo e texto */
-.logo-container {
-  display: flex;
-  align-items: center;
-}
-
-.logo-container img {
-  width: 100px;
-  height: auto;
-  margin-right: 5px;
-}
-
-/* Estilos para os itens da navbar */
-#menu li {
-  list-style-type: none;
-  display: inline;
-  margin-right: 15px;
-}
-
-/* Adiciona um espaçamento ao conteúdo para não ficar atrás da navbar fixa */
-body {
-  margin-top: 70px;
-}
-
-/* Estilo para a seção de autores */
 .authors-section {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 40px 20px;
+  justify-content: center; /* Centraliza os cards no container */
+  gap: 20px; /* Cria um espaço consistente entre os cards */
+  padding: 40px 0; /* Espaçamento vertical */
 }
 
 .author {
+  width: 22%; 
+  min-width: 280px; /* Garante que o card não fique muito espremido */
+  
   text-align: center;
-  width: 30%;
-  margin-bottom: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-color: #fff;
+  transition: transform 0.2s ease-in-out;
+}
+
+.author:hover {
+  transform: translateY(-5px);
+}
+
+.author a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .author img {
@@ -114,80 +103,60 @@ body {
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
-}
-
-.author h3 {
-  margin-top: 10px;
-}
-
-.author p {
-  font-size: 14px;
-  color: #555;
-}
-
-/* Estilos gerais */
-body {
-  background-color: #f8f8f8;
-  /* Cor de fundo suave */
-  font-family: 'Arial', sans-serif;
-  /* Fonte legível */
-}
-
-/* Seção de autores */
-.authors-section {
-  padding: 40px 20px;
-  /* Espaçamento adicional */
-}
-
-.author {
-  width: 25%;
-  /* Ajuste a largura dos contêineres */
-  margin-bottom: 30px;
-  border-radius: 10px;
-  /* Bordas arredondadas */
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  /* Sombra suave */
-  padding: 20px;
-  /* Espaçamento interno */
-}
-
-.author img {
-  border-radius: 50%;
-  /* Foto redonda */
   margin-bottom: 15px;
-  /* Espaçamento entre foto e nome */
+  border: 3px solid #f0f0f0;
 }
 
 .author h3 {
   font-size: 1.2em;
-  /* Tamanho de fonte maior para o nome */
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
 .author p {
   font-size: 1em;
-  /* Tamanho de fonte padrão para a descrição */
   color: #555;
-  /* Cor de texto */
+  flex-grow: 1;
 }
 
-/* Navbar */
-.navbar-container {
-  background-color: #333;
-  /* Cor de fundo da navbar */
-  color: #fff;
-  /* Cor de texto da navbar */
+
+/* --- MEDIA QUERY PARA TABLETS (Telas Médias) --- */
+/* Aplica estes estilos quando a tela for de 1024px ou menor */
+@media (max-width: 1024px) {
+  .author {
+    width: 45%; 
+  }
 }
 
-#menu li a {
-  color: #fff;
-  /* Cor dos links da navbar */
-  text-decoration: none;
-  /* Sem sublinhado */
+
+/* --- MEDIA QUERY PARA CELULARES (Telas Pequenas) --- */
+/* Aplica estes estilos quando a tela for de 768px ou menor */
+@media (max-width: 768px) {
+  #sobrebot-view {
+    margin-left: 0; 
+    padding: 15px;
+  }
+
+  .authors-section {
+    gap: 15px;
+  }
+
+  .author {
+    width: 90%; 
+    min-width: unset;
+  }
+
+  .author h3 {
+    font-size: 1.1em;
+  }
+
+  .author p {
+    font-size: 0.9em;
+  }
 }
 
-#menu li a:hover {
-  text-decoration: underline;
-  /* Sublinhado ao passar o mouse */
+body {
+  background-color: #f8f8f8;
+  font-family: 'Arial', sans-serif;
 }
 </style>
