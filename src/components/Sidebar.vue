@@ -63,7 +63,7 @@ const logout = () => {
   width: 250px;
   background-color: var(--sidebar-bg, #212529);
   color: var(--text-color-light, #f8f9fa);
-  height: auto;
+  height: 100%;
   position: fixed;
   left: 0;
   top: 0;
