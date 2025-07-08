@@ -60,7 +60,7 @@ const logout = () => {
 
 <style scoped>
 .sidebar {
-  width: 10%;
+  width: 250px;
   background-color: var(--sidebar-bg, #212529);
   color: var(--text-color-light, #f8f9fa);
   height: 100vh;
