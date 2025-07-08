@@ -167,21 +167,21 @@ const logout = () => {
 }
   /*Tablet(768px a 1024px)*/
 @media (max-width: 1024px){
-  
-}
-  /*Mobile(767)*/
-@media (max-width: 767px){
   .sidebar {
-  width: 80px;
-  
+  width: 240px;
 }
-  .logo-text {
-  font-size: 16px;
+   .logo-text {
+  font-size: 18px;
 }
 .nav-link {
   font-size: 18px; /* Adjust icon size */
 }
-
-
+}
+  /*Mobile(767)*/
+@media (max-width: 767px){
+    .sidebar {
+     width: 80px;
+  
+  }
 }
 </style>
