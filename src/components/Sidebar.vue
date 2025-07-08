@@ -178,7 +178,7 @@ const logout = () => {
   .logo-text {
   font-size: 16px;
 }
-.nav-link .icon {
+.nav-link {
   font-size: 18px; /* Adjust icon size */
 }
 
