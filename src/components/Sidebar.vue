@@ -165,5 +165,14 @@ const logout = () => {
 .btn-logout:hover {
   background-color: #5a6268;
 }
-
+  /*Tablet(768px a 1024px)*/
+@media (max-width: 1024px){
+  
+}
+  /*Mobile(767)*/
+@media (max-width: 767px){
+  .sidebar {
+  width: 80px;
+}
+}
 </style>
