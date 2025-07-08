@@ -173,6 +173,15 @@ const logout = () => {
 @media (max-width: 767px){
   .sidebar {
   width: 80px;
+  
 }
+  .logo-text {
+  font-size: 16px;
+}
+.nav-link .icon {
+  font-size: 18px; /* Adjust icon size */
+}
+
+
 }
 </style>
