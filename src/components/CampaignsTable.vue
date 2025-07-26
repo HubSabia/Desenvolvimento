@@ -1,8 +1,24 @@
 <template>
-  <div class="campaigns-table-container">
-    <h3 v-if="campaigns.length > 0">Lista de Campanhas</h3>
-    <p v-else>Nenhuma campanha cadastrada ainda.</p>
-    <table v-if="campaigns.length > 0" class="table campaigns-table">
+    <div class="campaigns-table-container">
+    <div v-if="campaigns.length > 0" class="table-header">
+      <h3>Lista de Campanhas</h3>
+      <button
+        @click="emitAddCampaign"
+        class="btn btn-sm btn-success"
+        title="Adicionar campanha"
+      >Adicionar Campanhas</button>
+    </div>
+    <div v-else class="table-header-else">
+      <p>Nenhuma campanha cadastrada ainda. </p>
+      <button id="else"
+        @click="emitAddCampaign"
+        class="btn btn-sm btn-success"
+        title="Adicionar campanha"
+      >Adicionar Campanhas</button>    
+
+    </div>
+    <table v-if="campaigns.length > 0" class="table campaigns-table"> 
+      
       <thead>
         <tr>
           <th>Nome</th>
@@ -41,7 +57,7 @@ const props = defineProps({
   },
 });
 
-const emit = defineEmits(["edit-campaign", "delete-campaign"]);
+const emit = defineEmits(["edit-campaign", "delete-campaign", "add-campaign"]);
 
 const emitEdit = (id) => {
   emit("edit-campaign", id);
@@ -50,6 +66,10 @@ const emitEdit = (id) => {
 const emitDelete = (id) => {
   // Consider adding a confirmation dialog here in a real application
   emit("delete-campaign", id);
+};
+
+const emitAddCampaign = () => {
+  emit("add-campaign");
 };
 
 const getStatusClass = (status) => {
@@ -74,6 +94,30 @@ const getStatusClass = (status) => {
   padding: 25px;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.table-header-else {
+  display: grid;
+  grid-row: 2;
+  grid-column: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.btn-success {
+  background-color: #28a745;
+  color: white;
+}
+.btn-success:hover {
+  background-color: #218838;
 }
 
 .campaigns-table-container h3 {
@@ -137,7 +181,6 @@ const getStatusClass = (status) => {
   background-color: #17a2b8;
   color: white;
 }
-
 .btn-info:hover {
   background-color: #117a8b;
 }
