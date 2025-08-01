@@ -48,7 +48,7 @@ const handleLogin = () => {
 
 onMounted(() => {
   // Emit event to update page title (though Login might not need a header title)
-  instance.emit("update-title", "Login");
+  instance.emit("update-title", "Login - Projeto Integrador IFPR");
 });
 
 </script>

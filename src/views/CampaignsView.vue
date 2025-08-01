@@ -74,7 +74,7 @@ const handleCancelForm = () => {
 };
 
 onMounted(() => {
-  instance.emit("update-title", "Campanhas");
+  instance.emit("update-title", "Gerenciamento de Campanhas");
 });
 
 </script>

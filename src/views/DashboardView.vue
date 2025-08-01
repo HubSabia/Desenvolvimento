@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard-view">
-    <h2 class="view-title">Dashboard</h2>
+    <h1 class="view-title">Dashboard do Projeto Integrador IFPR</h1>
     <p class="view-subtitle">Visão geral do sistema</p>
 
     <!-- Placeholder for stats cards -->
@@ -25,7 +25,7 @@
 
     <!-- Placeholder for recent activity table -->
     <div class="content-card">
-      <h3>Atividade Recente</h3>
+      <h2>Atividade Recente do Sistema</h2>
       <p>Tabela de atividades recentes aparecerá aqui...</p>
     </div>
   </div>

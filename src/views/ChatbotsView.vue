@@ -14,7 +14,7 @@ import { onMounted, getCurrentInstance } from 'vue';
 const instance = getCurrentInstance();
 
 onMounted(() => {
-  instance.emit("update-title", "Chatbots");
+  instance.emit("update-title", "Gestão de Chatbots IFPR");
 });
 </script>
 
