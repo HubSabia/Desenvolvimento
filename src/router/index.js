@@ -38,6 +38,12 @@ const routes = [
     meta: { title: 'Sobre o Bot', requiresAuth: true }
   },
   {
+    path: '/editais',
+    name: 'Editais',
+    component: () => import('@/views/EditaisView.vue'),
+    meta: { title: 'Editais', requiresAuth: true }
+  },
+  {
     path: '/chatbot',
     name: 'ChatBot',
     component: () => import('@/views/ChatBotView.vue'),

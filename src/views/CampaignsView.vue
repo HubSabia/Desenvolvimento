@@ -20,9 +20,9 @@
 
 <script setup>
 import { ref } from 'vue';
+import { onMounted, getCurrentInstance } from 'vue';
 import CampaignForm from '@/components/CampaignForm.vue';
 import CampaignsTable from '@/components/CampaignsTable.vue';
-import { onMounted, getCurrentInstance } from 'vue';
 
 const instance = getCurrentInstance();
 
