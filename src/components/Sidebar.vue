@@ -12,28 +12,30 @@
             <span>Dashboard</span>
           </router-link>
         </li>
-        <li>
-          <router-link to="/campanhas" class="nav-link" active-class="active">
-            <i class="icon icon-campaign"></i>
-            <span>Campanhas</span>
-          </router-link>
-        </li>
-        <li>
-          <router-link to="/chatbots" class="nav-link" active-class="active">
-            <i class="icon icon-chatbot"></i>
-            <span>Chatbots</span>
-          </router-link>
-        </li>
+          <li>
+            <router-link to="/editais" class="nav-link" active-class="active">
+              <i class="icon icon-campaign"></i>
+              <span>Editais</span>
+            </router-link>
+          </li>
+            <li>
+              <router-link to="/campanhas" class="nav-link sub-link" active-class="active">
+                <i class="icon icon-chatbot"></i>
+                <span>Campanhas</span>
+              </router-link>
+              <ul class="submenu">
+                <li>
+                <router-link to="/chatbots" class="nav-link sub-link" active-class="active">
+                  <i class="icon icon-users"></i>
+                  <span>Chatbots</span>
+                </router-link>
+                </li>
+              </ul>
+              </li>
         <li>
           <router-link to="/usuarios" class="nav-link" active-class="active">
             <i class="icon icon-users"></i>
-            <span>Usuários</span>
-          </router-link>
-        </li>
-        <li>
-          <router-link to="/editais" class="nav-link" active-class="active">
-            <i class="icon icon-users"></i>
-            <span>Editais</span>
+            <span>Usuarios</span>
           </router-link>
         </li>
        <li> <!-- Novo link adicionado -->
@@ -60,7 +62,6 @@ const logout = () => {
   console.log("Logout clicked");
   router.push("/"); // Redirect to login
 };
-
 // Placeholder for icon components or classes if using an icon library
 </script>
 
@@ -79,7 +80,18 @@ const logout = () => {
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
   transition: width 0.3s ease;
 }
+.navigation .submenu {
+  list-style: none;
+  padding-left: 20px; /* Adiciona indentação para indicar a hierarquia */
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
 
+.navigation .submenu .sub-link {
+  /* Estilo para o link do submenu, talvez um pouco menor */
+  font-size: 0.9em;
+  opacity: 0.9;
+}
 .logo-container {
   display: flex;
   align-items: center;

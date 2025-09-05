@@ -1,0 +1,59 @@
+/* Estilos básicos para o menu */
+.main-menu {
+    list-style: none;
+    padding: 0;
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.main-menu .menu-item {
+    position: relative; /* Importante para o posicionamento do submenu */
+    display: inline-block; /* Para que os itens do menu principal fiquem na mesma linha */
+    margin-right: 20px;
+}
+
+.main-menu .menu-item > a {
+    display: block;
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.main-menu .menu-item > a:hover {
+    background-color: #555;
+}
+
+/* Estilos para o submenu */
+.submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute; /* Posiciona o submenu em relação ao item pai */
+    top: 100%; /* Coloca o submenu abaixo do item principal */
+    left: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    display: none; /* Esconde o submenu por padrão */
+    border-radius: 5px;
+}
+
+.submenu li a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.submenu li a:hover {
+    background-color: #ddd;
+}
+
+/* Exibir o submenu quando o item principal for clicado (usaremos JS para isso) */
+.menu-item.active .submenu {
+    display: block;
+}
